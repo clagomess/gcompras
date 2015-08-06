@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.storageapi.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <title>GCOMPRAS</title>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href=".">
+                <span>GCOMPRAS</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="TblItem" class="panel panel-default">
+        <div class="panel-heading">
+            <strong>Itens</strong>
+            <span class="pull-right btn-group">
+                <button class="btn btn-primary btn-xs" modal="item.html">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    Adicionar
+                </button>
+                <button id="limpar" class="btn btn-danger btn-xs">
+                    <i class="glyphicon glyphicon-trash"></i>
+                    Limpar
+                </button>
+            </span>
+        </div>
+        <div class="list-group" style="display: none"></div>
+        <div class="panel-body">
+            Não há itens disponíveis.
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content"><!-- ajax --></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

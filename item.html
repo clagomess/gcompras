@@ -1,0 +1,43 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">Item</h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="desItem" class="required">Descrição</label>
+                <input id="desItem" required="required" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="numItem" class="required">Quantidade</label>
+                <input id="numItem" required="required" class="form-control" type="number" value="1">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+    <button id="incluir" type="button" class="btn btn-primary">Incluir</button>
+</div>
+<script type="text/javascript">
+    $('#incluir').click(function(){
+        var TblItem = ns.localStorage.get("TblItem");
+
+        TblItem.push({
+            numItem: $('#numItem').val(),
+            desItem: $('#desItem').val(),
+            sitAtivo: 1
+        });
+
+        ns.localStorage.set("TblItem", TblItem);
+
+        monta_lista();
+
+        alert("Incluído com sucesso!")
+    });
+</script>
